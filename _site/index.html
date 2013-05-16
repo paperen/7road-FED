@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="nico 0.3.1">
+    <meta name="theme" content="one 0.1">
+    <title>7Road web前端开发模块化 初稿</title>
+    <link rel="stylesheet" href="./static/one.css" />
+    <link rel="stylesheet" href="./static/syntax.css" />
+  </head>
+  <body>
+    <div class="navigation" role="navigation">
+      <div class="container">
+        <a class="home" href="./">7road-FED</a>
+        <div class="menu">
+          <a href="./">首页</a>
+        </div>
+      </div>
+    </div>
+    <div class="document">
+<div class="hentry">
+  <h1 class="entry-title">7Road web前端开发模块化 初稿</h1>
+  <div class="entry-meta">
+    <time class="updated" datetime="2013-04-15T00:00:00.000Z">2013-04-15</time>
+  </div>
+  <div class="entry-content"><h2 id="我们前端开发遇到的问题">我们前端开发遇到的问题</h2><ol>
+<li>需求不断增多与变化，页面转化率低</li>
+<li>文件版本不统一，维护成本高</li>
+<li>单兵作战，团队效能未能发挥到最大化</li>
+<li>bug重复检测或者边做边检测，效率低</li>
+<li>网站性能优化靠后，要总体权衡</li>
+<li>没有统一[强制性]开发规范</li>
+</ol>
+<h2 id="我们要怎样解决我们面临的问题">我们要怎样解决我们面临的问题</h2><h3 id="前端知识积累-bug解决方案列表-前端模块化解决方案">前端知识积累+bug解决方案列表+前端模块化解决方案</h3><h2 id="切图">切图</h2><ol>
+<li>工具：ps </li>
+<li>图片格式：png/gif/jpeg</li>
+<li>图片sprite(应该模块化区分，不要过分强调http请求数，加大维护成本)</li>
+<li>图片压缩工具</li>
+<li>减少图片http链接数[lazyload解决方案]</li>
+<li>图片性能img属性src与容器背景background区别，图片预加载，图片动态加载
+.....</li>
+</ol>
+<h2 id="html">Html</h2><ol>
+<li>语义化的HTML            <strong>[前端知识积累+模块化解决方案]</strong></li>
+<li>规范和合理html结构     <strong>[前端知识积累+模块化解决方案]</strong></li>
+<li>会做一个专题讲解        <strong>[语义化的HTML,规范和合理html结构]</strong></li>
+</ol>
+<h2 id="css">Css</h2><ol>
+<li>重构reset.css 规范 文字排版规范   参考 (<a href="https://github.com/sofish">https://github.com/sofish</a>)        <strong>[前端知识积累+模块化解决方案]</strong></li>
+<li>命名规范:(可以参考 <a href="http://aliceui.org/">http://aliceui.org/</a>)   <strong>[前端知识积累+模块化解决方案]</strong></li>
+<li>css书写顺序规范:<div class="highlight"><pre><code class="css"><span class="comment">/*
+    第一步：位置 display,position,float,margin,padding,top,left,right,bottom
+    第二步: 自身 background,width,height
+    第三步：文本 text-indent,text-decoration....
+    第四步：文字 font
+    第五步：ie hack或者其他游览器hack
+    第六部：css3属性
+    可以参考 Mozilla官方推荐CSS书写顺序 http://www.mozilla.org/css/base/content.css
+*/</span></code></pre></div></li>
+<li>做一个游览器bug大全(包括bug/bug解决方案) 参考 <a href="https://github.com/sofish">https://github.com/sofish</a> alice项目 <a href="http://sofish.de/1400">http://sofish.de/1400</a> </li>
+<li>通用模块化解决方案 (demo包括 html结构 与 css)   解决再次出现游览器bug  参考<a href="http://www.w3cplus.com/solution/index/index.html">http://www.w3cplus.com/solution/index/index.html</a> <strong>[前端知识积累+模块化解决方案]</strong></li>
+<li>css三步走: reset.css=&gt;module.css=&gt;extend_module.css  <strong>[前端知识积累+模块化解决方案]</strong></li>
+<li>css性能专题[选择符，属性，兼容性,游览器工作原理]</li>
+</ol>
+<h2 id="javascript">Javascript</h2><ol>
+<li>命名规范与开发规范 参考 <a href="https://github.com/sofish/idiomatic.js">https://github.com/sofish/idiomatic.js</a></li>
+<li>用seajs 作为 模块化加载器与模块化管理器 [module,export,seajs.use...]</li>
+<li>用原生js 开发一个 base.js (dom操作，事件兼容，ajax封装，多属性的运动框架) 追求性能或者一些活动页面使用</li>
+<li>范好模块化书写的规范与性能优化 重用性 防止过度封装 注意权衡 （每一个版本的更新会标注文字说明 更新日期）</li>
+<li>js性能优化/jquery性能优化(专题)</li>
+</ol>
+<h2 id="周会">周会</h2><p>每周 必须抽一个下午 起码3个小时， 大家聊一聊开发中遇到问题，怎样解决 以及模块化遇到哪些问题 （必须的，说说大家是怎样欺骗游览器的）</p>
+<h2 id="参考资料">参考资料</h2><ul>
+<li>支付宝团队:              <a href="http://aliceui.org/">http://aliceui.org/</a>             <a href="http://aralejs.org/">http://aralejs.org/</a></li>
+<li>google html/css规范：    <a href="http://chajn.org/htmlcssguide/htmlcssguide.html">http://chajn.org/htmlcssguide/htmlcssguide.html</a></li>
+<li>google js规范：          <a href="http://chajn.org/jsguide/javascriptguide.html">http://chajn.org/jsguide/javascriptguide.html</a></li>
+<li>人人FED CSS编码规范：    <a href="http://fed.renren.com/archives/1212">http://fed.renren.com/archives/1212</a></li>
+<li>Bootstrap 中文:          <a href="http://www.bootcss.com/">http://www.bootcss.com/</a></li>
+<li>css 解决 方案:           <a href="http://www.w3cplus.com/solution/index/index.html">http://www.w3cplus.com/solution/index/index.html</a></li>
+</ul>
+<h2 id="博客推荐">博客推荐</h2><ul>
+<li>张鑫旭:     <a href="http://www.zhangxinxu.com/wordpress/">http://www.zhangxinxu.com/wordpress/</a></li>
+<li>Ria之家：   <a href="http://www.36ria.com/">http://www.36ria.com/</a></li>
+<li>王子墨 ：   <a href="http://julying.com/blog/">http://julying.com/blog/</a></li>
+<li>Snandy：    <a href="http://www.cnblogs.com/snandy/">http://www.cnblogs.com/snandy/</a></li>
+</ul>
+</div>
+</div>
+</div>
+    <div class="footer">
+      <p>&copy; 2013 7road-FED</p>
+      <p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.3.1</p>
+    </div>
+    <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="./static/one.js"></script>
+  </body>
+</html>
